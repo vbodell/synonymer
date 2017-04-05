@@ -12,3 +12,6 @@ e.g
 
 ## Dependencies
 * [Beautifulsoup](https://www.crummy.com/software/BeautifulSoup/)
+
+## To-do
+* Do not print ',' before new line
