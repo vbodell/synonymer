@@ -7,8 +7,8 @@ Use with syn <Query>
 e.g
 
 > syn eljest
-eljes:  (ngt åld.) annars, i annat fall, för övrigt, över huvud, i vanliga fall
+> eljes:  (ngt åld.) annars, i annat fall, för övrigt, över huvud, i vanliga fall
 
 
 ## Dependencies
-*[Beautifulsoup] (https://www.crummy.com/software/BeautifulSoup/)
+* [Beautifulsoup](https://www.crummy.com/software/BeautifulSoup/)
