@@ -3,16 +3,15 @@ from bs4 import BeautifulSoup
 import urllib
 
 query = raw_input()
-basurl = "http://www.synonymer.se/?query="
+basurl = "http://www.synonymer.se/sv-syn/"
 url = "%s%s" % (basurl, query)
 site = urllib.urlopen(url)
 soup = BeautifulSoup(site, "html.parser")
 
-synonymer = soup.find("div", "boxContent")
+synonymer = soup.find("div", "box box-result box-result-syn").find("div", "box_body").li.ol
 
-
-rank = synonymer.find_all("b")
-submeaning = synonymer.find_all("i")
+rank = synonymer.find_all("li")
+submeaning = synonymer.find_all("em")
 synonym = synonymer.find_all("a")
 
 for s in synonymer:
