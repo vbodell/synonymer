@@ -9,9 +9,10 @@ To use with command line put syn file in path, make sure cd in syn goes to pytho
 
 e.g
 
-    syn eljest
-    eljes:  (ngt åld.) annars, i annat fall, för övrigt, över huvud, i vanliga fall
-
+```
+./syn eljest
+eljes:  (ngt åld.) annars, i annat fall, för övrigt, över huvud, i vanliga fall
+```
 
 ## Dependencies
 * [Beautifulsoup](https://www.crummy.com/software/BeautifulSoup/)
