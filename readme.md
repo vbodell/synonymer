@@ -11,7 +11,7 @@ e.g
 
 ```
 ./syn eljest
-eljes:  (ngt åld.) annars, i annat fall, för övrigt, över huvud, i vanliga fall
+>>>eljes:  (ngt åld.) annars, i annat fall, för övrigt, över huvud, i vanliga fall
 ```
 
 ## Dependencies
