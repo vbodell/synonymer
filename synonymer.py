@@ -1,13 +1,12 @@
-from __future__ import print_function
 from bs4 import BeautifulSoup
-import urllib
+from urllib.request import urlopen
 
 LINE_LIMIT = 80
 
-query = raw_input()
+query = input()
 basurl = "http://www.synonymer.se/sv-syn/"
-url = "%s%s" % (basurl, query)
-site = urllib.urlopen(url)
+url = f"{basurl}{query}"
+site = urlopen(url)
 soup = BeautifulSoup(site, "html.parser")
 
 synonymer = soup.find("div", id="dict-default").find("div", "body").ul.li.ol
@@ -20,7 +19,7 @@ i = 1
 curLine = 0
 for s in synonymer:
     if s in rank:
-        print("\n%d. %s" % (i, s.get_text()), end='')
+        print(f"\n{i}. {s.get_text()}", end='')
         i += 1
         curLine += 3 + len(s.get_text())
 
@@ -46,9 +45,9 @@ for s in synonymer:
             print()
             curLine = 0
         if s.previous_sibling in rank:
-            print("%s: %s" % (s.get_text(), s.next_sibling), end='')
+            print(f"{s.get_text()}: {s.next_sibling}", end='')
             curLine += len(s.get_text()) + 2 + len(s.next_sibling)
         else:
-            print("\n%s: %s" % (s.get_text(), s.next_sibling), end='')
+            print(f"\n{s.get_text()}: {s.next_sibling}", end='')
             curLine += len(s.get_text()) + 2 + len(s.next_sibling)
 print()

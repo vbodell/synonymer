@@ -2,7 +2,10 @@
 
 Short python script for accessing www.synonymer.se with relevant synonyms for word
 To use with command line put syn file in path, make sure cd in syn goes to python script directory.
-Use with syn <Query>
+
+## Usage
+
+`./syn <query>`
 
 e.g
 
@@ -14,12 +17,6 @@ e.g
 * [Beautifulsoup](https://www.crummy.com/software/BeautifulSoup/)
 
 ## To-do
-* Do not print ',' before new line
+* Prettier print words
+* Add 'meaning'-paragraphs to printout as option
 
-## Version History
-###1.0 
-First version of program
-
-###1.1
-Updated 09/13/17 to function with new html body of https://synonymer.se/
-Note: Has not been tested more than briefly and may contain bugs not found in 1.0.
